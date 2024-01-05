@@ -1,7 +1,13 @@
+@import './mixin';
+@import './pages/home.scss';
+
 body {
   background-color: white;
 }
 
 main {
-  padding: 100px;
+  color: white;
+  height: 100vh;
+  padding: 0 10vmax 0 10vmax;
+  background-color: #116E63;
 }
