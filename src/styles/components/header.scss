@@ -28,3 +28,24 @@
     gap: 2rem;
   }
 }
+
+@media screen and (max-width:960px) {
+  .header_contianer {
+    flex-direction: column;
+    height: 100vh;
+
+    .nav_link_container {
+      ul {
+        flex-direction: column;
+      }
+    }
+
+    .header_end {
+      button {
+        display: block;
+        padding: 0.5rem;
+        margin: 2px;
+      }
+    }
+  }
+}

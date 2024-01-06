@@ -1,29 +1,21 @@
+import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useState, useEffect } from "react";
-import { CustomDrawer } from ".";
+import { RxHamburgerMenu } from "react-icons/rx";
+import Drawer from "react-modern-drawer";
+import "react-modern-drawer/dist/index.css";
 
-function Header() {
-  const [phoneActive, setPhoneActive] = useState<boolean>(
-    window.innerWidth < 1100,
-  );
-
-  const resizeHandler = () => {
-    setPhoneActive(window.innerWidth < 960);
+const CustomDrawer = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState);
   };
-
-  useEffect(() => {
-    window.addEventListener("resize", resizeHandler);
-
-    return () => {
-      window.removeEventListener("resize", resizeHandler);
-    };
-  }, []);
 
   return (
     <>
-      {phoneActive ? (
-        <CustomDrawer />
-      ) : (
+      <button onClick={toggleDrawer}>
+        <RxHamburgerMenu />
+      </button>
+      <Drawer open={isOpen} onClose={toggleDrawer} direction="left">
         <div className="header_contianer">
           <div>
             <h1>ADACODE</h1>
@@ -44,9 +36,9 @@ function Header() {
             </button>
           </div>
         </div>
-      )}
+      </Drawer>
     </>
   );
-}
+};
 
-export default Header;
+export default CustomDrawer;
