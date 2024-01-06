@@ -6,7 +6,7 @@
 
   h1 {
     color: var(--heading-color);
-    padding-bottom: 4rem;
+    padding: 4rem 1rem 4rem 1rem;
   }
 
   span {
@@ -17,4 +17,20 @@
 .review_cards_wrapper {
   @include flex-center;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .review_container {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review_container {
+    padding: 2rem 1rem 2rem 1rem;
+
+    h1 {
+      text-align: center;
+    }
+  }
 }

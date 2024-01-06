@@ -4,6 +4,7 @@ import {
   FaFacebook,
   FaTwitter,
 } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 function Footer() {
   return (
@@ -50,8 +51,14 @@ function Footer() {
       </div>
       <div>
         <h3>Subscribe</h3>
-        <input placeholder="Enter your email" className="email_input" />
-        <button className="button_dark">Subscribe Now</button>
+        <input
+          placeholder="Enter your email"
+          className="email_input"
+          type="email"
+        />
+        <button className="button_dark">
+          Subscribe Now <FaArrowRightLong />
+        </button>
       </div>
     </div>
   );
