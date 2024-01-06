@@ -2,10 +2,13 @@
 @import './pages/home.scss';
 @import './pages/courses.scss';
 @import './components/header.scss';
+@import './components/coursecard.scss';
 @import './components/miniheader.scss';
 
 :root {
   --primary-color: #116E63;
+  --secondary-color: #F2A227;
+  --heading-color: #0F2A47
 }
 
 body {
@@ -15,6 +18,24 @@ body {
 .button_light {
   padding: 1rem;
   color: #116E63;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: 1px solid white;
+    color: white;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+.button_dark {
+  padding: 1rem;
+  background-color: #F7B401;
   border: none;
   border-radius: 5px;
   display: flex;

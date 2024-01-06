@@ -1,0 +1,19 @@
+ .course_card_contianer {
+   background-color: var(--primary-color);
+   width: 15vmax;
+   color: white;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 2rem;
+   padding: 1rem;
+   padding-bottom: 2rem;
+
+   h3 {
+     text-align: center;
+   }
+
+   p {
+     text-align: center;
+   }
+ }

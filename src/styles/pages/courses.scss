@@ -1,0 +1,27 @@
+.course_container {
+  @include flex-center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.course_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: var(--heading-color);
+    padding-bottom: 4rem;
+
+    span {
+      color: #F2A227;
+    }
+  }
+
+}
+
+.course_card_wrapper {
+  @include flex-center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
