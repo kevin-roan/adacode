@@ -1,0 +1,28 @@
+.hero_contianer {
+  @include flex-center;
+  background-color: var(--primary-color);
+  padding: 0 10vmax 0 10vmax;
+  color: white;
+
+  .home_section_left {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    span {
+      color: #F2A227;
+    }
+  }
+
+  .home_section_right {
+    img {
+      height: 40rem;
+      width: 40rem;
+    }
+  }
+}

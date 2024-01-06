@@ -1,0 +1,67 @@
+@import "../mixin";
+
+.mini_header {
+  background-color: white;
+  height: 3vmax;
+  width: 100%;
+  margin: 0;
+  padding: 0 10vmax 0 10vmax;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+
+  .left {
+    @include flex-center;
+    gap: 2rem;
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      svg {
+        color: var(--primary-color)
+      }
+    }
+  }
+
+  .right {
+    @include flex-center;
+    gap: 3rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+
+      color: (var(--primary-color));
+
+      &:hover {
+        transition: ease-in-out 0.4s;
+        color: black;
+      }
+
+    }
+
+    .logo_contianer {
+      display: flex;
+      gap: 10px;
+
+      svg {
+        &:hover {
+          transition: ease-in-out 0.4s;
+          color: (var(--primary-color));
+        }
+      }
+
+    }
+  }
+
+}
+
+.logo_contianer {
+  display: flex;
+}

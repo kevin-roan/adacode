@@ -1,13 +1,31 @@
 @import './mixin';
 @import './pages/home.scss';
+@import './pages/courses.scss';
+@import './components/header.scss';
+@import './components/miniheader.scss';
+
+:root {
+  --primary-color: #116E63;
+}
 
 body {
   background-color: white;
 }
 
-main {
-  color: white;
-  height: 100vh;
-  padding: 0 10vmax 0 10vmax;
-  background-color: #116E63;
+.button_light {
+  padding: 1rem;
+  color: #116E63;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: 1px solid white;
+    color: white;
+    transition: ease-in-out 0.3s;
+  }
 }

@@ -1,11 +1,17 @@
-import { Home } from "./pages/";
+import { Header, MiniHeader } from "./components/";
+import { Home, Courses } from "./pages/";
 import "./styles/app.scss";
 
 function App() {
   return (
-    <main>
-      <Home />
-    </main>
+    <>
+      <MiniHeader />
+      <Header />
+      <main>
+        <Home />
+        <Courses />
+      </main>
+    </>
   );
 }
 
