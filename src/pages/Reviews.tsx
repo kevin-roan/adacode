@@ -4,7 +4,7 @@ function Reviews() {
   return (
     <div className="review_container">
       <h1>
-        What others have to say <span>about us</span>
+        What others say <span>about us</span>
       </h1>
       <div className="review_cards_wrapper">
         <ReviewCard />
