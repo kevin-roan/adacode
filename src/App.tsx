@@ -1,5 +1,5 @@
 import { Header, MiniHeader } from "./components/";
-import { Home, Courses } from "./pages/";
+import { Home, Courses, Reviews } from "./pages/";
 import "./styles/app.scss";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <main>
         <Home />
         <Courses />
+        <Reviews />
       </main>
     </>
   );

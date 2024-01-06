@@ -1,0 +1,20 @@
+.review_container {
+  min-height: 100vh;
+  @include flex-center;
+  padding: 0 10rem 0 10rem;
+  flex-direction: column;
+
+  h1 {
+    color: var(--heading-color);
+    padding-bottom: 4rem;
+  }
+
+  span {
+    color: var(--secondary-color);
+  }
+}
+
+.review_cards_wrapper {
+  @include flex-center;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,8 @@
+.review_container {
+  @include flex-center;
+
+  h1 {
+    span {}
+  }
+
+}
