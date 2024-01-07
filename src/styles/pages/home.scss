@@ -28,9 +28,10 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .hero_contianer {
     flex-direction: column;
+    padding: 5rem;
 
     .home_section_left {
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
