@@ -12,9 +12,12 @@ const CustomDrawer = () => {
 
   return (
     <>
-      <button onClick={toggleDrawer}>
-        <RxHamburgerMenu />
-      </button>
+      <div className="mobile_nav">
+        <h1>ADACODE</h1>
+        <button onClick={toggleDrawer} className="drawer_button">
+          <RxHamburgerMenu />
+        </button>
+      </div>
       <Drawer open={isOpen} onClose={toggleDrawer} direction="left">
         <div className="header_contianer">
           <div>

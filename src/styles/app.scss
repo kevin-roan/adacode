@@ -54,3 +54,15 @@ body {
     transition: ease-in-out 0.3s;
   }
 }
+
+.drawer_button {
+  border: none;
+  padding: 1rem;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.mobile_nav {
+  display: flex;
+  justify-content: space-between;
+}

@@ -21,7 +21,9 @@ function Header() {
 
   return (
     <>
-      {phoneActive ? null : (
+      {phoneActive ? (
+        <CustomDrawer />
+      ) : (
         <div className="header_contianer">
           <div>
             <h1>ADACODE</h1>
