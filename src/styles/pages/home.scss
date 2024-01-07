@@ -1,4 +1,5 @@
 .hero_contianer {
+  height: 93vh;
   @include flex-center;
   background-color: var(--primary-color);
   padding: 0 10vmax 2rem 10vmax;
