@@ -8,6 +8,7 @@
 @import './components/coursecard.scss';
 @import './components/miniheader.scss';
 @import './components/footer.scss';
+@import './components/drawer.scss';
 
 :root {
   --primary-color: #116E63;
@@ -53,16 +54,4 @@ body {
     color: white;
     transition: ease-in-out 0.3s;
   }
-}
-
-.drawer_button {
-  border: none;
-  padding: 1rem;
-  background-color: transparent;
-  font-weight: bold;
-}
-
-.mobile_nav {
-  display: flex;
-  justify-content: space-between;
 }

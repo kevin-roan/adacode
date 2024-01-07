@@ -1,11 +1,10 @@
-import { Header, MiniHeader, Footer } from "./components/";
+import { Header, Footer } from "./components/";
 import { Home, Courses, Reviews } from "./pages/";
 import "./styles/app.scss";
 
 function App() {
   return (
     <>
-      <MiniHeader />
       <Header />
       <main>
         <Home />
