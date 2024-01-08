@@ -8,7 +8,7 @@ function App() {
     <>
       <Header />
       <main>
-        <FloatingWhatsApp phoneNumber="77369 72033" accountName="ADACODE" />
+        <FloatingWhatsApp phoneNumber="+91 6227222333" accountName="ADACODE" />
         <Home />
         <Courses />
         <Reviews />
