@@ -18,3 +18,31 @@
   padding: 0.5rem;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
+
+.mobile_dawer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  height: 100vh;
+  color: white;
+
+  ul>li {
+    list-style: none;
+    padding: 1rem 1rem;
+  }
+
+  button {
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

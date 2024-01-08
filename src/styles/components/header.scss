@@ -32,21 +32,19 @@
 @media screen and (max-width:960px) {
   .header_contianer {
     flex-direction: column;
+    padding: 0 0 0 0;
     height: 100vh;
     justify-content: space-around;
 
     .nav_link_container {
       ul {
+        gap: 1rem;
         flex-direction: column;
       }
     }
 
     .header_end {
-      button {
-        display: block;
-        padding: 0.5rem;
-        margin: 2px;
-      }
+      display: block;
     }
   }
 }

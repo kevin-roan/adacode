@@ -19,11 +19,9 @@ const CustomDrawer = () => {
         </button>
       </div>
       <Drawer open={isOpen} onClose={toggleDrawer} direction="left">
-        <div className="header_contianer">
-          <div>
-            <h1>ADACODE</h1>
-          </div>
-          <div className="nav_link_container">
+        <div className="mobile_dawer">
+          <h1>ADACODE</h1>
+          <div className="">
             <ul>
               <li>Home</li>
               <li>About Us</li>
@@ -32,8 +30,8 @@ const CustomDrawer = () => {
               <li>Contact Us</li>
             </ul>
           </div>
-          <div className="header_end">
-            <button className="button_light">
+          <div className="">
+            <button className="">
               Contact Us
               <FaArrowRightLong />
             </button>
