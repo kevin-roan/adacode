@@ -1,15 +1,17 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { RiFlutterFill } from "react-icons/ri";
 
-function CoureCard() {
+interface CourseCardProps {
+  title: string;
+  desc: string;
+}
+
+function CourseCard({ title, desc }: CourseCardProps) {
   return (
     <div className="course_card_contianer">
       <RiFlutterFill className="course_logo" />
-      <h3>Machine Learning</h3>
-      <p>
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-        cillum sint consectetur cupidatat.
-      </p>
+      <h3>{title}</h3>
+      <p>{desc}</p>
       <button className="button_dark">
         View Details
         <FaArrowRightLong />
@@ -18,4 +20,4 @@ function CoureCard() {
   );
 }
 
-export default CoureCard;
+export default CourseCard;

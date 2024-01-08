@@ -6,20 +6,24 @@
    align-items: center;
    flex-direction: column;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-   gap: 2rem;
+   gap: 1rem;
    padding: 1rem;
    padding-bottom: 2rem;
+   min-height: 24rem;
+   overflow-y: auto;
 
    h3 {
      text-align: center;
+     text-overflow: ellipsis;
    }
 
    p {
      text-align: center;
+     height: 14rem;
+     text-overflow: ellipsis;
    }
 
    .course_logo {
-     font-size: 4rem;
      border: 2px dotted white;
      padding: 1rem;
      border-radius: 100px;

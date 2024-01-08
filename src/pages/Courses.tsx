@@ -1,4 +1,5 @@
 import { CourseCard } from "../components";
+import coursesData from "../assets/courses.json";
 
 function Courses() {
   return (
@@ -9,10 +10,13 @@ function Courses() {
         </h1>
       </div>
       <div className="course_card_wrapper">
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
+        {coursesData.courses.map((course, index) => (
+          <CourseCard
+            key={index}
+            title={course.title}
+            desc={course.description}
+          />
+        ))}
       </div>
     </div>
   );
