@@ -1,5 +1,5 @@
 import { Header, Footer } from "./components/";
-import { Home, Courses, Reviews } from "./pages/";
+import { Home, Courses, Reviews, Contact } from "./pages/";
 import "./styles/app.scss";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
         <Home />
         <Courses />
         <Reviews />
+        <Contact />
       </main>
       <Footer />
     </>
