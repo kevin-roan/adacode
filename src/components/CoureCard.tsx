@@ -22,7 +22,7 @@ function CourseCard({ title, desc }: CourseCardProps) {
         View Details
         <FaArrowRightLong />
       </button>
-      {showModal ? <Popup /> : null}
+      {showModal ? <Popup onClose={() => setShowModal(false)} /> : null}
     </div>
   );
 }
