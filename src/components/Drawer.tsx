@@ -3,6 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
+import { Link } from "react-router-dom";
 
 const CustomDrawer = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -23,11 +24,21 @@ const CustomDrawer = () => {
           <h1>ADACODE</h1>
           <div className="">
             <ul>
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Courses</li>
-              <li>Gallery</li>
-              <li>Contact Us</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About Us</Link>
+              </li>
+              <li>
+                <Link to="/courses">Courses</Link>
+              </li>
+              <li>
+                <Link to="/gallary">Gallary</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
             </ul>
           </div>
           <div className="">

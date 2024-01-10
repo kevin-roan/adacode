@@ -2,10 +2,11 @@
   height: 100vh;
   @include flex-center;
   flex-direction: column;
+  padding: 4rem 1rem 4rem 1rem;
 
   h1 {
     color: var(--heading-color);
-    padding: 4rem 1rem 4rem 1rem;
+    padding-bottom: 2rem;
   }
 
   span {

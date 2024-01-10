@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "../components/";
-import { Home, Courses, Reviews, Contact, NotFound } from "../pages/";
+import { Gallery, Home, Courses, Reviews, Contact, NotFound } from "../pages/";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const LayoutRoutes = () => (
@@ -22,6 +22,7 @@ const LayoutRoutes = () => (
       <Route path="/courses" element={<Courses />} />
       <Route path="/reviews" element={<Reviews />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
     <Footer />

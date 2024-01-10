@@ -1,6 +1,7 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 import { CustomDrawer, MiniHeader } from ".";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [phoneActive, setPhoneActive] = useState<boolean>(
@@ -32,16 +33,26 @@ function Header() {
             </div>
             <div className="nav_link_container">
               <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Courses</li>
-                <li>Gallery</li>
-                <li>Contact Us</li>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about">About Us</Link>
+                </li>
+                <li>
+                  <Link to="/courses">Courses</Link>
+                </li>
+                <li>
+                  <Link to="/gallery">Gallery</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact Us</Link>
+                </li>
               </ul>
             </div>
             <div className="header_end">
               <button className="button_light">
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
                 <FaArrowRightLong />
               </button>
             </div>

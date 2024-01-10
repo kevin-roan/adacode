@@ -31,6 +31,16 @@
   ul>li {
     list-style: none;
     padding: 1rem 1rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        border-bottom: 1px solid white;
+        transition: ease-in-out 0.2s;
+      }
+    }
   }
 
   button {
