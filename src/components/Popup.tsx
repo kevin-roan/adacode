@@ -1,12 +1,13 @@
 import { createPortal } from "react-dom";
 
-function Popup({ onClose }) {
+type OnCloseFunction = () => void;
+function Popup({ onClose }: { onClose: OnCloseFunction }) {
   return <>{createPortal(<ModalContent onClose={onClose} />, document.body)}</>;
 }
 
 export default Popup;
 
-const ModalContent = ({ onClose }) => (
+const ModalContent = ({ onClose }: { onClose: OnCloseFunction }) => (
   <div className="modal-overlay">
     <div className="modal">
       <div className="modal-header">
