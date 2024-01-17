@@ -1,8 +1,13 @@
 .dashboard_container {
   height: 84vh;
   display: flex;
-}
 
+  a {
+    color: black;
+  }
+
+
+}
 
 .sidebard_container {
   width: 20vmax;
@@ -21,10 +26,6 @@
 
     svg {
       color: var(--heading-color);
-    }
-
-    a {
-      color: black;
     }
 
     &:hover {

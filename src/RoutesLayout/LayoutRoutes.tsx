@@ -5,6 +5,8 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import Dashboard from "../pages/Admin/Dashboard";
 import Login from "../pages/Admin/Login";
 import logo_avatar from '../assets/logo-light.png'
+import StudentList from "../pages/Admin/StudentList";
+import ManageCourse from '../pages/Admin/ManageCourse'
 
 const LayoutRoutes = () => (
   <Router>
@@ -29,6 +31,8 @@ const LayoutRoutes = () => (
       <Route path="/admin" element={<Login />} />
       <Route path="/*" element={<NotFound />} />
       <Route path="/admin/dashboard" element={<Dashboard/>} />
+      <Route path="/admin/studentlist" element={<StudentList/>} />
+      <Route path="/admin/managecourse" element={<ManageCourse/>} />
     </Routes>
     <Footer />
   </Router>

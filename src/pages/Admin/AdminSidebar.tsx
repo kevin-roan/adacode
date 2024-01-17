@@ -17,10 +17,10 @@ export default AdminSidebar;
 const NavList = () =>{
   return(
   <div className="sidebard_container">
-      <div className="sidebar_item"><MdDashboard /> <Link to="/admin/dashboard">DashBoard </Link> </div>
-      <div className="sidebar_item"><PiStudentBold/><Link to="admin/studentlist">StudentList </Link></div>
-      <div className="sidebar_item"> <FaSearch/> <Link to="/admin/filter">Filter </Link></div>
-      <div className="sidebar_item"> <FaGear/> <Link to="/admin/settings">Settings </Link></div>
+<Link to="/admin/dashboard"> <div className="sidebar_item"><MdDashboard /> DashBoard </div> </Link> 
+ <Link to="/admin/studentlist">     <div className="sidebar_item"><PiStudentBold/>StudentList </div></Link>
+  <Link to="/admin/managecourse">            <div className="sidebar_item"> <FaSearch/> Course Management</div></Link>
+  <Link to="/admin/settings"><div className="sidebar_item"> <FaGear/> Settings </div></Link>
     </div>
   )
 }
