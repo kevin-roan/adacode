@@ -2,6 +2,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 import { CustomDrawer, MiniHeader } from ".";
 import { Link } from "react-router-dom";
+import logolight from '../assets/logo-light.png';
 
 function Header() {
   const [phoneActive, setPhoneActive] = useState<boolean>(
@@ -28,8 +29,9 @@ function Header() {
         <>
           <MiniHeader />
           <div className="header_contianer">
-            <div>
-              <h1>ADACODE</h1>
+            <div className="logo_container">
+                <img src={logolight} alt="adacode logo" className="logo_light"/>
+                <h1>ADACODE</h1>
             </div>
             <div className="nav_link_container">
               <ul>

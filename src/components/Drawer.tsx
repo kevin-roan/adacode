@@ -22,7 +22,7 @@ const CustomDrawer = () => {
       <Drawer open={isOpen} onClose={toggleDrawer} direction="left">
         <div className="mobile_dawer">
           <h1>ADACODE</h1>
-          <div className="">
+          <div >
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -41,7 +41,7 @@ const CustomDrawer = () => {
               </li>
             </ul>
           </div>
-          <div className="">
+          <div >
             <button className="">
               Contact Us
               <FaArrowRightLong />

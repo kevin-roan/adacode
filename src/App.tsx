@@ -3,9 +3,7 @@ import LayoutRoutes from "./RoutesLayout/LayoutRoutes";
 
 function App() {
   return (
-    <>
-      <LayoutRoutes />
-    </>
+  <LayoutRoutes />
   );
 }
 

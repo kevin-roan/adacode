@@ -27,6 +27,18 @@
     }
   }
 
+  .logo_light {
+    height: 40px;
+    width: 40px;
+  }
+
+  .logo_container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
   .header_end {
     display: flex;
     align-items: center;
