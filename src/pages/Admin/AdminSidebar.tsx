@@ -1,5 +1,5 @@
 import { MdDashboard } from "react-icons/md";
-import { FaGear } from "react-icons/fa6";
+import { GrGallery } from "react-icons/gr";
 import { PiStudentBold } from "react-icons/pi";
 import { FaSearch } from "react-icons/fa";
 import {Link} from 'react-router-dom';
@@ -20,7 +20,7 @@ const NavList = () =>{
 <Link to="/admin/dashboard"> <div className="sidebar_item"><MdDashboard /> DashBoard </div> </Link> 
  <Link to="/admin/studentlist">     <div className="sidebar_item"><PiStudentBold/>StudentList </div></Link>
   <Link to="/admin/managecourse">            <div className="sidebar_item"> <FaSearch/> Course Management</div></Link>
-  <Link to="/admin/settings"><div className="sidebar_item"> <FaGear/> Settings </div></Link>
+  <Link to="/admin/managegallery"><div className="sidebar_item"> <GrGallery/> Gallery Management</div></Link>
     </div>
   )
 }

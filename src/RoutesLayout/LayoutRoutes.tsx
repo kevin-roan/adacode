@@ -7,6 +7,7 @@ import Login from "../pages/Admin/Login";
 import logo_avatar from '../assets/logo-light.png'
 import StudentList from "../pages/Admin/StudentList";
 import ManageCourse from '../pages/Admin/ManageCourse'
+import ManageGallery from '../pages/Admin/GalleryManager'
 
 const LayoutRoutes = () => (
   <Router>
@@ -33,6 +34,7 @@ const LayoutRoutes = () => (
       <Route path="/admin/dashboard" element={<Dashboard/>} />
       <Route path="/admin/studentlist" element={<StudentList/>} />
       <Route path="/admin/managecourse" element={<ManageCourse/>} />
+      <Route path="/admin/managegallery" element={<ManageGallery />} />
     </Routes>
     <Footer />
   </Router>
