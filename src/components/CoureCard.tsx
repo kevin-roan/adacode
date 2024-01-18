@@ -6,9 +6,10 @@ import { Popup } from ".";
 interface CourseCardProps {
   title: string;
   desc: string;
+  downloadCourse:React.FC;
 }
 
-function CourseCard({ title, desc }: CourseCardProps) {
+function CourseCard({ title, desc ,downloadCourse}: CourseCardProps) {
   const [showModal, setShowModal] = useState(false);
   const handleClick = () => {
     setShowModal(!showModal);
@@ -22,7 +23,7 @@ function CourseCard({ title, desc }: CourseCardProps) {
         View Details
         <FaArrowRightLong />
       </button>
-      {showModal ? <Popup onClose={() => setShowModal(false)} /> : null}
+      {showModal ? <Popup downloadCourse={downloadCourse} onClose={() => setShowModal(false)} /> : null}
     </div>
   );
 }

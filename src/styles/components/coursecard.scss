@@ -11,6 +11,11 @@
    padding-bottom: 2rem;
    min-height: 24rem;
    overflow-y: auto;
+   transition: transform 0.3s ease-in-out;
+
+   &:hover {
+     transform: translateY(-5px);
+   }
 
    h3 {
      text-align: center;

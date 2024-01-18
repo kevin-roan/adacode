@@ -59,3 +59,24 @@
   }
 
 }
+
+.pdf_button {
+  padding: 0.2rem 1rem;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pdf_button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  color: #888;
+  border: 1px solid #aaa;
+}

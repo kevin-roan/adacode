@@ -8,8 +8,21 @@ import logo_avatar from '../assets/logo-light.png'
 import StudentList from "../pages/Admin/StudentList";
 import ManageCourse from '../pages/Admin/ManageCourse'
 import ManageGallery from '../pages/Admin/GalleryManager'
+import PrivateRoutes from "./PrivateRoutes";
+import {app} from '../Helpers/firebaseHelper'
+import {useEffect,useState}  from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
-const LayoutRoutes = () => (
+const LayoutRoutes = () => {
+  const [user, setUser] = useState(null);
+useEffect(() => {
+  const auth = getAuth();
+  const unsubscribe = onAuthStateChanged(auth, (authUser) => {
+    setUser(authUser);
+  });
+  return () => unsubscribe();
+}, []);
+return (
   <Router>
     <Header />
     <FloatingWhatsApp phoneNumber="+917736972033" accountName="ADACODE Solutions" avatar={logo_avatar} />
@@ -31,13 +44,15 @@ const LayoutRoutes = () => (
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/admin" element={<Login />} />
       <Route path="/*" element={<NotFound />} />
+      <Route element={<PrivateRoutes isAdmin={user} />}>
       <Route path="/admin/dashboard" element={<Dashboard/>} />
       <Route path="/admin/studentlist" element={<StudentList/>} />
       <Route path="/admin/managecourse" element={<ManageCourse/>} />
       <Route path="/admin/managegallery" element={<ManageGallery />} />
+      </Route>
     </Routes>
     <Footer />
   </Router>
-);
+)};
 
 export default LayoutRoutes;

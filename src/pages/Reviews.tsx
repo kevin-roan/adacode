@@ -1,4 +1,5 @@
 import { ReviewCard } from "../components";
+import reviewsData from '../assets/reviews.json'
 
 function Reviews() {
   return (
@@ -7,10 +8,15 @@ function Reviews() {
         What others say <span>about us</span>
       </h1>
       <div className="review_cards_wrapper">
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
+        {reviewsData && reviewsData.reviews.map((item, index) => (
+          <ReviewCard
+            key={index}
+            username={item.username}
+            qualification={item.qualification}
+            imgUrl={item.imgUrl}
+            review={item.review}
+          />
+        ))}
       </div>
     </div>
   );

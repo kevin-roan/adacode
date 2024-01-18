@@ -3,7 +3,8 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { AgGridReact } from 'ag-grid-react';
 import { useState } from 'react';
 
-const GridExample = () => {
+const StudentTable = ({studentData}) => {
+  console.log('studentdata',studentData);
   const [rowData, setRowData] = useState([
     { id: 1, name: 'Kevin Roan', phonenumber: 64950, action: true },
     { id: 2, name: 'kevinroan', phonenumber: 33850, action: false },
@@ -30,4 +31,4 @@ const GridExample = () => {
   );
 };
 
-export default GridExample;
+export default StudentTable;

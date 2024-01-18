@@ -6,6 +6,7 @@
   background-color: var(--primary-color);
   color: white;
   position: sticky;
+  z-index: 1000;
   top: 0;
 
   .nav_link_container {
