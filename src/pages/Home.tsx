@@ -6,11 +6,10 @@ function Home() {
     <div className="hero_contianer">
       <section className="home_section_left">
         <h1>
-          LEARN NEW SKILLS WITH TOP <span>EDUCATORS</span>
+          EMPOWERING TOMORROW <span>ADACODE</span>
         </h1>
         <p>
-          We are experienced in educational platform and skilled stratergies for
-          the success of our online learing
+At ADACODE, we are not just a software company; we are passionate educators dedicated to shaping the future of tech. Unlock your potential with our cutting-edge software education solutions and embark on a journey of knowledge and skill mastery.
         </p>
         <button className="button_light">
           Find The Course

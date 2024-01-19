@@ -10,17 +10,21 @@ if (user) {
 }
 
 const signIn = (email, password) => {
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      user = userCredential.user;
-      console.log("user signed in");
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert("user authentication failed");
-      console.log(errorCode, errorMessage);
-    });
+  return new Promise((resolve, reject) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        user = userCredential.user;
+        console.log("admin loggedin");
+        resolve(user); // Resolve the promise with the user
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert("user authentication failed");
+        console.log(errorCode, errorMessage);
+        reject(error); // Reject the promise with the error
+      });
+  });
 };
 
 const signOutCurrentUser = () => {
