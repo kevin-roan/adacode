@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "../components/";
 import { Gallery, Home, Courses, Reviews, Contact, NotFound } from "../pages/";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
