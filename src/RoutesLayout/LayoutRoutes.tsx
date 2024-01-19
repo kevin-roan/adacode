@@ -9,16 +9,20 @@ import StudentList from "../pages/Admin/StudentList";
 import ManageCourse from '../pages/Admin/ManageCourse'
 import ManageGallery from '../pages/Admin/GalleryManager'
 import PrivateRoutes from "./PrivateRoutes";
-import {app} from '../Helpers/firebaseHelper'
 import {useEffect,useState}  from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
+export interface User {
+  uid: string;
+  email: string;
+}
+
 const LayoutRoutes = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null);
 useEffect(() => {
   const auth = getAuth();
   const unsubscribe = onAuthStateChanged(auth, (authUser) => {
-    setUser(authUser);
+    setUser(authUser as User);
   });
   return () => unsubscribe();
 }, []);

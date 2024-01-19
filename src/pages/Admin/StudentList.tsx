@@ -4,13 +4,18 @@ import {db} from '../../Helpers/firebaseFirestore.js'
 import {getDocs,collection} from 'firebase/firestore';
 import {useEffect,useState} from 'react';
 
+interface StudentDataProps {
+  studentname: string;
+  phonenumber: string;
+}
+
 function StudentList() {
-  const [studentList,setStudentList] = useState([])
+  const [studentList,setStudentList] = useState<StudentDataProps[]>([])
   useEffect(() => {
     const fetchDocs = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "students"));
-        const newStudentData = [];
+        const newStudentData:StudentDataProps[] = [];
         querySnapshot.forEach((doc) => {
           const data = doc.data();
           // append all the data to the array

@@ -2,19 +2,14 @@ import { CourseCard } from "../components";
 import coursesData from "../assets/courses.json";
 
 function Courses() {
-const CourseDownloader = (filename) => {
-  
+
+const CourseDownloader = (filename:string) => {
 const fileUrlRegex = /^[a-zA-Z0-9-]+$/;
-
-
     if (!fileUrlRegex.test(filename)) {
       console.error('Invalid filename format');
       return;
     }
-
-
     const fullFilename = `/${filename}.pdf`;
-
   const fileUrl = fullFilename;
   const link = document.createElement("a");
   link.href = fileUrl;

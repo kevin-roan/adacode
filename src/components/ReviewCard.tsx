@@ -1,6 +1,14 @@
 import { ImQuotesLeft } from "react-icons/im";
 
-function ReviewCard({username,qualification,imgUrl,review}) {
+
+interface ReviewCardProps {
+    username:string;
+    qualification:string;
+  imgUrl:string;
+  review:string;
+}
+
+const ReviewCard:React.FC<ReviewCardProps> = ({username,qualification,imgUrl,review}) => {
   return (
     <div className="review_card_container">
       <ImQuotesLeft />
