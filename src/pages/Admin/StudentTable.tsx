@@ -3,17 +3,10 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { AgGridReact } from 'ag-grid-react';
 import { useState } from 'react';
 
-const StudentTable = ({studentData}) => {
-  console.log('studentdata',studentData);
-  const [rowData, setRowData] = useState([
-    { id: 1, name: 'Kevin Roan', phonenumber: 64950, action: true },
-    { id: 2, name: 'kevinroan', phonenumber: 33850, action: false },
-    { id: 3, name: 'Kevinraon', phonenumber: 29600, action: false },
-  ]);
-
+const StudentTable = ({studentList}) => {
+  const [rowData, setRowData] = useState(studentList);
   const [colDefs, setColDefs] = useState([
-    { field: 'id' },
-    { field: 'name' },
+    { field: 'studentname' },
     { field: 'phonenumber' },
     { field: 'action' },
   ]);

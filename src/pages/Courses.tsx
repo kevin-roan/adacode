@@ -34,6 +34,7 @@ const fileUrlRegex = /^[a-zA-Z0-9-]+$/;
             key={index}
             title={course.title}
             desc={course.description}
+            imgUrl={course.imgUrl}
             downloadCourse={()=>CourseDownloader(course.filename)}
           />
         ))}

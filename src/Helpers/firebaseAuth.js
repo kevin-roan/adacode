@@ -3,17 +3,22 @@ import { signOut } from "firebase/auth";
 import { app } from "./firebaseHelper";
 
 const auth = getAuth();
+let user;
+
+if (user) {
+  console.log("user is present");
+}
 
 const signIn = (email, password) => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      const user = userCredential.user;
+      user = userCredential.user;
       console.log("user signed in");
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("user signin failed");
+      alert("user authentication failed");
       console.log(errorCode, errorMessage);
     });
 };
@@ -26,4 +31,4 @@ const signOutCurrentUser = () => {
     .catch((error) => console.log(error));
 };
 
-export { signIn, signOutCurrentUser };
+export { signIn, signOutCurrentUser, user };

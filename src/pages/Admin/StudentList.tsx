@@ -31,7 +31,7 @@ function StudentList() {
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
-        <StudentTable studentsData={studentList}/>
+{studentList.length > 0 ? <StudentTable studentList={studentList} /> : null}
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import {signIn, signOutCurrentUser } from '../../Helpers/firebaseAuth.js'
+import {signIn, signOutCurrentUser ,user} from '../../Helpers/firebaseAuth.js'
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 
@@ -19,15 +19,19 @@ function Login() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
    e.preventDefault(); 
   }
-  const handleSignIn = async () => {
-    try{
-    await signIn(formData.email,formData.password);
-    navigate('/admin/dashboard');
-    }catch (error) {
-      console.error('Error Signing In',error.message)
-    }
-  }
+const handleSignIn = () => {
+  signIn(formData.email, formData.password)
+    .then((response) => {
+      if (response.ok) {
+        navigate('/admin/dashboard');
+      } else {
+        console.log('Login failed. Please check your credentials.');
+      }
+    })
+    .catch((error) => console.log(error.message));
+};
   return (
+    <>
     <form onClick={handleSubmit}>
     <div className="login_container">
       <div className="login_form_wrapper">
@@ -35,10 +39,13 @@ function Login() {
       <input placeholder="Enter Email Address" type="email" name="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required value={formData.email} onChange={handleChange}/>
       <input placeholder="Enter Password" type="password" name="password" required value={formData.password} onChange={handleChange}/>
       <input type="submit" className="button_light" value="submit" onClick={handleSignIn}/>
-      <button onClick={()=>signOutCurrentUser()}>Log Out</button>
+      { user ?
+<button onClick={()=>signOutCurrentUser()} className='button_light'>Log Out</button> : null
+            }
       </div>
     </div>
 </form>
+</>
   )
 }
 

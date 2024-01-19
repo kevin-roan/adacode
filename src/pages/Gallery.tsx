@@ -9,7 +9,6 @@ function Gallery() {
         <GalleryCard />
         <GalleryCard />
         <GalleryCard />
-        <GalleryCard />
       </div>
     </div>
   );

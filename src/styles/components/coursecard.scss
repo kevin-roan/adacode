@@ -6,12 +6,17 @@
    align-items: center;
    flex-direction: column;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-   gap: 1rem;
+   gap: 0.2rem;
    padding: 1rem;
-   padding-bottom: 2rem;
-   min-height: 24rem;
-   overflow-y: auto;
+   max-height: 24rem;
    transition: transform 0.3s ease-in-out;
+
+   img {
+     max-inline-size: 100%;
+     border-radius: 10px;
+     block-size: auto;
+     aspect-ratio: 2/1;
+   }
 
    &:hover {
      transform: translateY(-5px);
@@ -24,9 +29,13 @@
 
    p {
      text-align: center;
-     height: 14rem;
      text-overflow: ellipsis;
      overflow-y: auto;
+     font-size: 0.9rem;
+   }
+
+   button {
+     margin-top: 1rem;
    }
 
    .course_logo {
