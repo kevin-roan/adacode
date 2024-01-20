@@ -6,6 +6,7 @@ import {
   FaLocationArrow,
   FaClock,
 } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 
 function MiniHeader() {
   return (
@@ -20,10 +21,10 @@ function MiniHeader() {
         </p>
       </div>
       <div className="right">
-        <a href="/login">
+        <Link to="/admin/">
           <FaUser />
           Login/Register
-        </a>
+        </Link>
         <div className="logo_contianer">
           <FaFacebook />
           <FaInstagram />
