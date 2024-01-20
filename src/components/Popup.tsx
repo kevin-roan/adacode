@@ -60,15 +60,15 @@ const ModalContent = ({ onClose, downloadCourse }: { onClose: OnCloseFunction })
             onChange={handleChange}
             required
           />
-<input
-  type="tel"
-  name="phonenumber"
-  placeholder="Enter Your Phonenumber:"
-  pattern="[6-9]\d{9}"
-  onChange={handleChange}
-  value={formData.phonenumber}
-  required
-/>
+      <input
+      type="tel"
+      name="phonenumber"
+      placeholder="Enter Your Phonenumber:"
+      pattern="[6-9]\d{9}"
+      onChange={handleChange}
+      value={formData.phonenumber}
+      required
+      />
           <button onClick={handleSubmit} className="pdf_button" disabled={isFormDataEmpty || !isValidPhoneNumber}>
             Download Pdf
           </button>
