@@ -1,25 +1,35 @@
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-quartz.css';
-import { AgGridReact } from 'ag-grid-react';
-import { useState } from 'react';
+import {doc,deleteDoc} from 'firebase/firestore';
+import {db} from '../../Helpers/firebaseFirestore.js'
 
-const StudentTable = ({studentList}) => {
-  const [rowData, setRowData] = useState(studentList);
-  const [colDefs, setColDefs] = useState([
-    { field: 'studentname' },
-    { field: 'phonenumber' },
-    { field: 'action' },
-  ]);
+const StudentTable = ({ studentList }) => {
+  const handleDelete = async(item) => {
+    console.log('Delete button clicked');
+    await deleteDoc(doc,(db,"students","6282710821"))
+  };
 
   return (
-    <div
-      className={
-        "ag-theme-quartz"
-      }
-      style={{ width: '100%', height: '100%' }}
-    >
-      <h3 style={{color:"var(--primary-color)", fontSize:'2rem',paddingBottom:'2rem'}}>Student List</h3>
-      <AgGridReact rowData={rowData} columnDefs={colDefs} />
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Phone Number</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {studentList &&
+            studentList.map((item, index) => (
+              <tr key={index}>
+                <td>{item.studentname}</td>
+                <td>{item.phonenumber}</td>
+                <td>
+                  <button onClick={()=>handleDelete(item)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
     </div>
   );
 };
