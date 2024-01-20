@@ -6,3 +6,4 @@ export { default as Footer } from "./Footer";
 export { default as CustomDrawer } from "./Drawer";
 export { default as Popup } from "./Popup";
 export { default as GalleryCard } from "./GalleryCard";
+export { default as AboutCard} from "./AboutCard";

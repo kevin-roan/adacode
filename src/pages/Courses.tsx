@@ -22,7 +22,6 @@ const fileUrlRegex = /^[a-zA-Z0-9-]+$/;
 };
   return (
     <div className="course_container"
-
       ref={ref}
     >
       <div className="course_header">
@@ -37,8 +36,8 @@ const fileUrlRegex = /^[a-zA-Z0-9-]+$/;
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{
-        duration: 0.8,
-        delay: 0.5,
+        duration: 2,
+        delay: 0.9,
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >

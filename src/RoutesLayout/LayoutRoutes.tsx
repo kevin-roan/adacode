@@ -1,6 +1,6 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "../components/";
-import { Gallery, Home, Courses, Reviews, Contact, NotFound } from "../pages/";
+import { Gallery, Home, Courses, Reviews, Contact, NotFound ,About} from "../pages/";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import Dashboard from "../pages/Admin/Dashboard";
 import Login from "../pages/Admin/Login";
@@ -36,6 +36,7 @@ return (
         element={
           <>
             <Home />
+            <About />
             <Courses />
             <Reviews />
             <Contact />
@@ -46,6 +47,7 @@ return (
       <Route path="/reviews" element={<Reviews />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/gallery" element={<Gallery />} />
+      <Route path="/about" element={<About/>} />
       <Route path="/admin" element={<Login />} />
       <Route path="/*" element={<NotFound />} />
       <Route element={<PrivateRoutes isAdmin={user} />}>

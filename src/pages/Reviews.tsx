@@ -5,7 +5,7 @@ function Reviews() {
   return (
     <div className="review_container">
       <h1>
-        What others say <span>about us</span>
+        Our Student <span>Reviews</span>
       </h1>
       <div className="review_cards_wrapper">
         {reviewsData && reviewsData.reviews.map((item, index) => (

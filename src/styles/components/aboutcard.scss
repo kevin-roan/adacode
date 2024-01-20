@@ -1,0 +1,25 @@
+.about_card {
+  height: 20rem;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 18rem;
+  background-color: #E9E9ED;
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    color: var(--heading-color);
+    text-align: center;
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}

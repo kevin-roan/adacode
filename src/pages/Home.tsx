@@ -8,20 +8,18 @@ function Home() {
       <section className="home_section_left">
         <h1>
          ADACODE <span>
-<Typewriter
-  options={{
-    strings: ['EMPOWERING TOMORROW', 'IEEE PROJECTS','INDUSTRIAL EXPERTS','LIFE TIME PLACEMENT ASSISTANCE','EDUCATION LOAN','SCHOLARSHIP','COURSE CERTIFICATE'],
-    autoStart: true,
-    loop: true,
-changeDeleteSpeed:1,
-  }}
-/>
- 
-</span>
+      <Typewriter
+        options={{
+        strings: ['EMPOWERING TOMORROW', 'IEEE PROJECTS','INDUSTRIAL EXPERTS','LIFE TIME PLACEMENT ASSISTANCE','EDUCATION LOAN','SCHOLARSHIP','COURSE CERTIFICATE'],
+        autoStart: true,
+        loop: true,
+        changeDeleteSpeed:1,
+        }}
+        />
+        </span>
         </h1>
-
         <p>
-At ADACODE, we are not just a software company; we are passionate educators dedicated to shaping the future of tech. Unlock your potential with our cutting-edge software education solutions and embark on a journey of knowledge and skill mastery.
+        At ADACODE, we are not just a software company; we are passionate educators dedicated to shaping the future of tech. Unlock your potential with our cutting-edge software education solutions and embark on a journey of knowledge and skill mastery.
         </p>
         <button className="button_light">
           Find The Course
