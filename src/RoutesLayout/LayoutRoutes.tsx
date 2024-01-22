@@ -1,6 +1,6 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "../components/";
-import { Gallery, Home, Courses, Reviews, Contact, NotFound ,About} from "../pages/";
+import { Gallery, Home, Courses, Reviews, Contact, NotFound ,About, TechnologyStack} from "../pages/";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import Dashboard from "../pages/Admin/Dashboard";
 import Login from "../pages/Admin/Login";
@@ -38,6 +38,7 @@ return (
             <Home />
             <About />
             <Courses />
+            <TechnologyStack />
             <Reviews />
             <Contact />
           </>
