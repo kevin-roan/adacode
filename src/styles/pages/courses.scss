@@ -2,6 +2,7 @@
   @include flex-center;
   flex-direction: column;
   min-height: 100vh;
+  padding-bottom: 10rem;
 }
 
 .course_header {
@@ -22,6 +23,7 @@
 }
 
 .course_card_wrapper {
+  width: 80%;
   @include flex-center;
   gap: 2rem;
   flex-wrap: wrap;

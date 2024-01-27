@@ -1,3 +1,4 @@
+import React from "react";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
@@ -6,12 +7,24 @@ import { db } from "../Helpers/firebaseFirestore.js";
 type OnCloseFunction = () => void;
 
 function Popup({ onClose, downloadCourse }: { onClose: OnCloseFunction }) {
-  return <>{createPortal(<ModalContent onClose={onClose} downloadCourse={downloadCourse} />, document.body)}</>;
+  return (
+    <>
+      {createPortal(
+        <ModalContent onClose={onClose} downloadCourse={downloadCourse} />,
+        document.body,
+      )}
+    </>
+  );
 }
 
 export default Popup;
 
-const ModalContent = ({ onClose, downloadCourse }: { onClose: OnCloseFunction }) => {
+const ModalContent = ({
+  onClose,
+  downloadCourse,
+}: {
+  onClose: OnCloseFunction;
+}) => {
   const [formData, setFormData] = useState({
     studentname: "",
     phonenumber: "",
@@ -25,7 +38,8 @@ const ModalContent = ({ onClose, downloadCourse }: { onClose: OnCloseFunction })
     }));
   };
 
-  const isFormDataEmpty = !formData.studentname.trim() || !formData.phonenumber.trim();
+  const isFormDataEmpty =
+    !formData.studentname.trim() || !formData.phonenumber.trim();
   const isValidPhoneNumber = /^[6-9]\d{9}$/.test(formData.phonenumber);
 
   const handleSubmit = async () => {
@@ -60,16 +74,20 @@ const ModalContent = ({ onClose, downloadCourse }: { onClose: OnCloseFunction })
             onChange={handleChange}
             required
           />
-      <input
-      type="tel"
-      name="phonenumber"
-      placeholder="Enter Your Phonenumber:"
-      pattern="[6-9]\d{9}"
-      onChange={handleChange}
-      value={formData.phonenumber}
-      required
-      />
-          <button onClick={handleSubmit} className="pdf_button" disabled={isFormDataEmpty || !isValidPhoneNumber}>
+          <input
+            type="tel"
+            name="phonenumber"
+            placeholder="10 Digit Phonenumber:"
+            pattern="[6-9]\d{9}"
+            onChange={handleChange}
+            value={formData.phonenumber}
+            required
+          />
+          <button
+            onClick={handleSubmit}
+            className="pdf_button"
+            disabled={isFormDataEmpty || !isValidPhoneNumber}
+          >
             Download Pdf
           </button>
         </div>
@@ -77,4 +95,3 @@ const ModalContent = ({ onClose, downloadCourse }: { onClose: OnCloseFunction })
     </div>
   );
 };
-

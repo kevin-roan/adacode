@@ -6,6 +6,7 @@
 @import './pages/notfound.scss';
 @import './pages/gallery.scss';
 @import './pages/about.scss';
+@import './pages/whyus.scss';
 @import './pages/admin/login.scss';
 @import './pages/admin/adminsidebar.scss';
 @import './pages/admin/dashboard.scss';
@@ -22,7 +23,7 @@
 @import './components/aboutcard.scss';
 
 :root {
-  --primary-color: #094067;
+  --primary-color: #004643;
   --secondary-color: #F2A227;
   --heading-color: #0F2A47
 }
@@ -66,4 +67,13 @@ body {
     color: white;
     transition: ease-in-out 0.3s;
   }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: your_color_here;
 }

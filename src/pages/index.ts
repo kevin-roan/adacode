@@ -6,3 +6,4 @@ export { default as NotFound } from "./NotFound";
 export { default as Gallery } from "./Gallery";
 export { default as About } from "./About";
 export { default as TechnologyStack } from "./TechnologyStack";
+export { default as WhyUs } from "./WhyUs";
