@@ -26,6 +26,11 @@
       width: 40vmax;
     }
   }
+
+  .home_button_wrapper {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 960px) {
