@@ -1,8 +1,9 @@
-import AdminSidebar from "./AdminSidebar"
-import StudentTable from './StudentTable.tsx'
-import {db} from '../../Helpers/firebaseFirestore.js'
-import {getDocs,collection} from 'firebase/firestore';
-import {useEffect,useState} from 'react';
+import AdminSidebar from "./AdminSidebar";
+import React from "react";
+import StudentTable from "./StudentTable.tsx";
+import { db } from "../../Helpers/firebaseFirestore.js";
+import { getDocs, collection } from "firebase/firestore";
+import { useEffect, useState } from "react";
 
 interface StudentDataProps {
   studentname: string;
@@ -10,12 +11,12 @@ interface StudentDataProps {
 }
 
 function StudentList() {
-  const [studentList,setStudentList] = useState<StudentDataProps[]>([])
+  const [studentList, setStudentList] = useState<StudentDataProps[]>([]);
   useEffect(() => {
     const fetchDocs = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "students"));
-        const newStudentData:StudentDataProps[] = [];
+        const newStudentData: StudentDataProps[] = [];
         querySnapshot.forEach((doc) => {
           const data = doc.data();
           // append all the data to the array
@@ -36,10 +37,12 @@ function StudentList() {
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
-{studentList.length > 0 ? <StudentTable studentList={studentList} /> : null}
+        {studentList.length > 0 ? (
+          <StudentTable studentList={studentList} />
+        ) : null}
       </div>
     </div>
-  )
+  );
 }
 
 export default StudentList;
