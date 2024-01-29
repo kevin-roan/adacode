@@ -1,14 +1,15 @@
 import AdminSidebar from "./AdminSidebar";
 import React from "react";
-import StudentTable from "./StudentTable.tsx";
 import { db } from "../../Helpers/firebaseFirestore.js";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, query, orderBy } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import List from "./List";
 
 interface StudentDataProps {
   studentname: string;
   phonenumber: string;
+  isCalled: boolean;
+  createdAt: string | number;
 }
 
 function StudentList() {
@@ -16,7 +17,12 @@ function StudentList() {
   useEffect(() => {
     const fetchDocs = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "students"));
+        const q = query(
+          collection(db, "students"),
+          orderBy("createdAt", "desc"),
+        );
+        const querySnapshot = await getDocs(q);
+        // const querySnapshot = await getDocs(collection(db, "students"));
         const newStudentData: StudentDataProps[] = [];
         querySnapshot.forEach((doc) => {
           const data = doc.data();
@@ -24,6 +30,8 @@ function StudentList() {
           newStudentData.push({
             studentname: data.studentname,
             phonenumber: data.phonenumber,
+            isCalled: data.isCalled,
+            createdAt: data.createdAt,
           });
         });
         setStudentList(newStudentData);
@@ -38,11 +46,6 @@ function StudentList() {
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
-        {/* 
-        {studentList.length > 0 ? (
-          <StudentTable studentList={studentList} />
-        ) : null}
-        */}
         {studentList.length > 0 ? <List studentList={studentList} /> : null}
       </div>
     </div>

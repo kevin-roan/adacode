@@ -1,8 +1,9 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import { useState } from "react";
-import { addDoc, collection } from "firebase/firestore";
+import { Firestore, addDoc, collection } from "firebase/firestore";
 import { db } from "../Helpers/firebaseFirestore.js";
+import { serverTimestamp } from "firebase/firestore";
 
 type OnCloseFunction = () => void;
 
@@ -45,8 +46,10 @@ const ModalContent = ({
   const handleSubmit = async () => {
     try {
       const docRef = await addDoc(collection(db, "students"), {
+        createdAt: serverTimestamp(),
         studentname: formData.studentname,
         phonenumber: formData.phonenumber,
+        isCalled: false,
       });
 
       console.log("Student Data added successfully", docRef.id);
