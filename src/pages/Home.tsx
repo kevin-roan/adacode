@@ -17,7 +17,7 @@ function Home() {
       <div className="hero_contianer">
         <section className="home_section_left">
           <h1>
-            ADACODE{" "}
+            ADACODE
             <span>
               <Typewriter
                 options={{

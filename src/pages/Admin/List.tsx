@@ -1,6 +1,7 @@
 import React from "react";
 
 const List = ({ studentList }) => {
+  const handleDelete = () => {};
   return (
     <div className="studentlist_container">
       <table>
@@ -18,11 +19,13 @@ const List = ({ studentList }) => {
             <td>{item.phonenumber}</td>
             <td>Called</td>
             <td>
-              <a href="tel:+91 6282710821">
-                <button>Call Us</button>
+              <a href={`tel:+91${item.phonenumber}`}>
+                <button>Call</button>
               </a>
-              <button>Whatsapp</button>
-              <button>Delete</button>
+              <a href={`http://wa.me/91${item.phonenumber}`}>
+                <button>WhatsApp</button>
+              </a>
+              <button onClick={handleDelete}>Delete</button>
             </td>
           </tr>
         ))}

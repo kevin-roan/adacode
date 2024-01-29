@@ -77,3 +77,21 @@
   }
 
 }
+
+
+
+@media screen and (max-width:850px) {
+  .dashboard_container {
+    margin-top: 10vmax;
+  }
+
+  .sidebard_container {
+    max-width: 4rem;
+
+    .sidebar_item {
+      p {
+        display: none;
+      }
+    }
+  }
+}
