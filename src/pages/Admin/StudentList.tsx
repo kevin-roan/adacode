@@ -4,6 +4,7 @@ import StudentTable from "./StudentTable.tsx";
 import { db } from "../../Helpers/firebaseFirestore.js";
 import { getDocs, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import List from "./List";
 
 interface StudentDataProps {
   studentname: string;
@@ -40,6 +41,7 @@ function StudentList() {
         {studentList.length > 0 ? (
           <StudentTable studentList={studentList} />
         ) : null}
+        <List />
       </div>
     </div>
   );

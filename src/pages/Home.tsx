@@ -70,6 +70,9 @@ function Home() {
         <div>
           <h1>200+ </h1>Students
         </div>
+        <a href="tel:+1234567890">
+          <button>Call Us</button>
+        </a>
       </section>
     </>
   );
