@@ -38,10 +38,12 @@ function StudentList() {
     <div className="right_pane_container">
       <AdminSidebar />
       <div className="right_pane">
+        {/* 
         {studentList.length > 0 ? (
           <StudentTable studentList={studentList} />
         ) : null}
-        <List />
+        */}
+        {studentList.length > 0 ? <List studentList={studentList} /> : null}
       </div>
     </div>
   );
