@@ -7,6 +7,7 @@
 @import './pages/gallery.scss';
 @import './pages/about.scss';
 @import './pages/whyus.scss';
+@import './pages/instagramfeed.scss';
 @import './pages/admin/login.scss';
 @import './pages/admin/adminsidebar.scss';
 @import './pages/admin/dashboard.scss';
@@ -24,7 +25,7 @@
 @import './components/aboutcard.scss';
 
 :root {
-  --primary-color: #004643;
+  --primary-color: #1a354d;
   --secondary-color: #F2A227;
   --heading-color: #0F2A47
 }

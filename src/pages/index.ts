@@ -7,3 +7,4 @@ export { default as Gallery } from "./Gallery";
 export { default as About } from "./About";
 export { default as TechnologyStack } from "./TechnologyStack";
 export { default as WhyUs } from "./WhyUs";
+export { default as InstagramFeed } from "./InstagramFeed";

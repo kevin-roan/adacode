@@ -51,7 +51,8 @@ function About() {
             />
           ))}
         </div>
-        <h1>
+        {/*
+           <h1>
           Our <span>Vision</span>
         </h1>
         <div className="vision_wrapper">
@@ -70,6 +71,8 @@ function About() {
             possibilities.
           </p>
         </div>
+
+           */}
       </div>
     </div>
   );

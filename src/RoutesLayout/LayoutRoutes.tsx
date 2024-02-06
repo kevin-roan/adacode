@@ -11,6 +11,7 @@ import {
   About,
   TechnologyStack,
   WhyUs,
+  InstagramFeed,
 } from "../pages/";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import Dashboard from "../pages/Admin/Dashboard";
@@ -55,7 +56,6 @@ const LayoutRoutes = () => {
               <Courses />
               <WhyUs />
               <TechnologyStack />
-              <Reviews />
               <Contact />
             </>
           }
