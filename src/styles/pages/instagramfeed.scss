@@ -22,7 +22,9 @@
       .reel_wrapper {
         width: 18rem;
         height: 24rem;
-        border: 2px solid black;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.134);
       }
     }
   }
