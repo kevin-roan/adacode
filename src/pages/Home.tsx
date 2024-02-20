@@ -43,9 +43,9 @@ function Home() {
             potential with our cutting-edge software education solutions and
             embark on a journey of knowledge and skill mastery.
           </p>
-          <a href="https://adacode-enroll-15.vercel.app">
+          <a href="https://register.adacodesolutions.com">
             <div className="button_enroll">
-              Enroll 15 Days Master Class Just ₹1000/-
+              Enroll 15 Days Master Class Just ₹ 1000/-
             </div>
           </a>
           <div className="home_button_wrapper">
