@@ -1,5 +1,5 @@
 .hero_contianer {
-  height: 100vh;
+  min-height: 100vh;
   @include flex-center;
   background-color: var(--primary-color);
   padding: 0 10vmax 2rem 10vmax;
@@ -73,6 +73,7 @@
     padding: 0 2rem 0 2rem;
 
     .home_section_left {
+      padding-top: 10vh;
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
       z-index: 2;
 
@@ -146,5 +147,6 @@
     .section_divider {
       color: #ccc;
     }
+
   }
 }
