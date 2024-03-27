@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { Header, Footer } from "../components/";
+import { Header, Footer, Certification } from "../components/";
 import {
   Gallery,
   Home,
@@ -53,6 +53,7 @@ const LayoutRoutes = () => {
             <>
               <Home />
               <About />
+              <Certification/>
               <Courses />
               <WhyUs />
               <TechnologyStack />

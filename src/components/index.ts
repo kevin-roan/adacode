@@ -7,3 +7,4 @@ export { default as CustomDrawer } from "./Drawer";
 export { default as Popup } from "./Popup";
 export { default as GalleryCard } from "./GalleryCard";
 export { default as AboutCard} from "./AboutCard";
+export { default as Certification} from "./Certification"
