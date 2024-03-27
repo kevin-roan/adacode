@@ -39,7 +39,7 @@ function Certification() {
           <center>
             <div className="course_header">
               <h1>
-                Comapanies that hired from<span>Adacode</span>
+                Comapanies that hired from <span> Adacode</span>
               </h1>
             </div>
           </center>
