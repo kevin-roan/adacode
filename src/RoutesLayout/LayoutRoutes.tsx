@@ -57,7 +57,6 @@ const LayoutRoutes = () => {
               <Courses />
               <WhyUs />
               <TechnologyStack />
-              <InstagramFeed />
               <Contact />
             </>
           }
